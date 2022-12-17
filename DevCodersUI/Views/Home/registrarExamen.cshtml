@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "RegistrarExamen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/examen.css" />
+
+<div class="d-flex justify-content-center body">
+    <div class="container registroExa">
+        <section class="text-center">
+            <h1>Registro de examen</h1>
+        </section>
+        <div class="divForm d-flex flex-row justify-content-center w-100">
+            <form class="w-100">
+                <div class="input-group mb-3">
+                    <span class="input-group-text w-25">Tipo del examen</span>
+                    <input class="form-control" id="tExamen" type="text" name="Tipo de examen" placeholder="Tipo de examen">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text w-25">Descripciónn del examen</span>
+                    <textarea class="form-control" id="descExamen" name="Descripcion del examen" placeholder="Descripcion del examen"></textarea>
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text w-25">Precio del examen</span>
+                    <input class="form-control" id="pExamen" type="text" name="Precio del examen" placeholder="Precio del examen">
+                </div>
+                <div class="input-group mb-3">
+                    <span class="input-group-text w-25">Parámetros del examen</span>
+                    <input class="form-control" id="paramExamen" type="text" name="Parametro" placeholder="Parametros del examen">
+                    <input type="button" onclick="agregarParam()" value="Agregar">
+                </div>
+                <div>
+                    <table id="tablaP" class="d-none">
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Borrar</th>
+                        </tr>
+
+                    </table>
+                </div>
+                <section class="text-center">
+                    <button class="registroBtn" onclick="registrar(event)"><p>Registrar</p></button>
+                </section>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/Scripts/JS/registrarExamen.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

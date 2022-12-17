@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/UserProfile.css" rel="stylesheet" />
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container-md bg-light">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+
+                @Html.ActionLink("CLINNIX", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+
+
+                <li class="nav-link px-2 link-dark">@Html.ActionLink("Registrar Laboratorio", "RegistroLaboratorio", "Home")</li>
+                <li class="nav-link px-2 link-dark">@Html.ActionLink("Dashboard Pagina", "DashBoardPagina", "AdministradorPagina")</li>
+
+                <li class="nav-link px-2 link-dark">@Html.ActionLink("Dashboard Laboratorio", "DashBoardLaboratorio", "DashBoardLaboratorio")</li>
+                <li class="nav-link px-2 link-dark">@Html.ActionLink("Modificar Laboratorio", "ModificacionLab", "ModificacionLab")</li>
+                <li class="nav-link px-2 link-dark">@Html.ActionLink("Pagar", "Paypal", "Home")</li>
+                <li class="nav-link px-2 link-dark">@Html.ActionLink("Mis Citas", "mostarCitas", "Home")</li>
+
+            </ul>
+            <div class="col-md-3 text-end">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content ">
+        @RenderBody()
+
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top ">
+            <p class="col-md-4 mb-0 text-muted">DevCoders</p>
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img class="img-fluid w-25" src="~/Content/Imagenes/logo_dorado-s.png" />
+            </a>
+            <ul class="nav col-md-4 justify-content-end">
+                <li class="nav-link px-2 link-secondary">@Html.ActionLink("Inicio", "Index", "Home")</li>
+                <li class="nav-link px-2 link-dark">@Html.ActionLink("Nosotros", "LandingTeam", "Home")</li>
+                <li class="nav-link px-2 link-dark">@Html.ActionLink("Producto", "LandingProduct", "Home")</li>
+            </ul>
+        </footer>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>@ViewBag.Title - CLINNIX</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+
+                @Html.ActionLink("CLINNIX", "LandingProduct", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <ul class="nav col-5 col-md-auto mb-2 justify-content-left mb-md-">
+                <li class="nav-link px-2 link-secondary">@Html.ActionLink("Inicio", "LandingProduct", "Home")</li>
+                <li class="nav-link px-2 link-dark">@Html.ActionLink("Acerca de Nosotros", "LandingTeam", "Home")</li>
+                
+            </ul>
+           
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy;CLINNIX @DateTime.Now.Year</p>
+        </footer>
+    </div>
+
+    <script src="~/Scripts/bootstrap.bundle.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>

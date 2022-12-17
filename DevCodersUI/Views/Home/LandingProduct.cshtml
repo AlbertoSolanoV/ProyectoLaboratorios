@@ -1,0 +1,244 @@
+﻿@{
+    Layout = null;
+    ViewBag.Title = "LandingProduct";
+}
+<!DOCTYPE HTML>
+
+<html class="bodyPage">
+
+<head>
+    <title>Landing Product</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!--enlaces para los iconos-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/LandingProduct.css" rel="stylesheet" />
+</head>
+ 
+
+
+<body>
+
+    <!-- =======Start Header ======= -->
+    <header class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <img class="img-fluid w-25" src="~/Content/Imagenes/logo_dorado-s.png" />
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="~/Home/PaginaMain" class="nav-link px-2 link-dark">Inicio</a></li>
+            <li><a href="#ServiciosLab" class="nav-link px-2 link-dark">Servicio de laboratorios</a></li>
+            <li><a href="~/Home/LandingTeam" class="nav-link px-2 link-dark">Nuestro equipo</a></li>
+        </ul>
+        <!--Boton de redireccion menu login y registro-->
+        <div class="col-md-3 text-end">
+            <a class="btn btn-outline-primary me-2" href="~/Login/Login" type="button">Iniciar sesión</a>
+            <a class="btn btn-primary" href="~/RegistroForm/RegistroForm" type="button">Registrarse</a>
+
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =======Start Descripcion del producto ======= -->
+        <section class="bg-primary h-25 text-white">
+            <div class="container">
+                <br />
+            </div>
+            <div class="d-flex flex-row pt-5 py-4">
+                <section class="w-50  py-4 pe-lg-2 ps-5 ms-4 d-flex justify-content-between">
+                    <div>
+                        <h1 class="text-center">CLINNIX</h1>
+                        <h3 class="text-center ps-5">
+                            Somos la plataforma de servicios clínicos que cuenta con la mayor cantidad de laboratorios afiliados en Costa Rica. Ponemos a su disposición, la mayor variedad de exámenes clínicos.
+                        </h3>
+                        <h3 class="text-center ps-5">
+                            Regístrese ahora y ten al alcance de tus manos los mayores laboratorios del País.
+                        </h3>
+                        <div class="pt-5 text-center">
+                            <a class="btn btn-success" href="~/RegistroForm/RegistroForm" type="button">Registrarse</a>
+                        </div>
+                    </div>
+                </section>
+                <section class=" container d-flex justify-content-end">
+                    <img class=" mx-auto d-block " src="~/Content/Imagenes/imagenLab.jpg" />
+                </section>
+            </div>
+            <div class="container">
+                <br />
+                <br />
+            </div>
+        </section>
+
+
+
+
+        <!-- ======= Featured Services Section ======= -->
+        <section class="featured-services pt-4" id="ServiciosLab">
+
+            <div class="container">
+                <br />
+                <br />
+            </div>
+
+            <div class="container-xl">
+                <section class="flex-row">
+                    <div class="container flex-row">
+                        <h3 class="descripcion">Con CLINNIX puedes acceder a múltiples ventajas una vez te registres en nuestra app. </h3>
+                    </div>
+                    <div class="container flex-row">
+                        <img class="ImageFeaturesSection" src="~/Content/Imagenes/ImgSeccionBrayanLandingProducto.png" />
+                    </div>
+                </section>
+                <div class="container">
+                    <br />
+                    <br />
+                </div>
+                
+
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box ">
+                            <div class="icon"></div>
+                            <h4 class="title">Exámenes </h4>
+                            <p class="description">Podrá revisar sus exámenes de manera rápida una vez estén listos mediante tu correo electrónico. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <h4 class="title">Resultados</h4>
+                            <p class="description">Los resultados son estrictamente confidenciales, los cuales solo el paciente y el laboratorio conocerán.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <h4 class="title">Pago por PayPal</h4>
+                            <p class="description">Podrá comprar sus exámenes y pagarlos mediante PayPal, así que puede estar tranquilo que no pediremos sus tarjetas de crédito. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <div class="icon"></div>
+                            <h4 class="title">Reagendar cita</h4>
+                            <p class="description">Si en dado caso no puede asistir a un examen que ya reservo, tiene la posibilidad de reagendar sin costo alguno. </p>
+                        </div>
+                    </div>
+                    <p class="description">*Se tendrá que reagendar la cita en los 30 días desde la fecha que se pagó el examen.</p>
+                    <p class="description">*Si el laboratorio cancela la cita, el laboratorio le notificará una fecha para reagendar su cita.</p>
+                </div>
+                <br />
+                <br />
+                <br />
+                <br />
+            </div>
+        </section>
+        <!-- End Featured Services Section -->
+        <!-- Start advantages and disadvantages -->
+        <div class="d-flex flex-row bg-primary">
+
+            <section class="w-50 pt-2 py-4 flex-row">
+                <h3 class="descripcion text-white">Inicia sesión  en tu cuenta para disfrutar de un mejor control de tu salud.</h3>
+                <div class="col-md-3 text-end flex-row">
+                    <a class="btn btn-success py-2" href="~/Login/Login" type="button">Iniciar sesión</a>
+                </div>
+            </section>
+            <section class="w-50 container flex-row">
+                <div class="container flex-row">
+                    <img class=" mx-auto d-block w-75 pt-4 py-4" src="~/Content/Imagenes/Lab.jpg" />
+                </div>
+            </section>
+        </div>
+
+        <section class="containerVen2 bg-white ">
+            <div class="container">
+                <br />
+                <br />
+            </div>
+            <div class="sectionDaniel2">
+                <div class="container px-4 py-5" id="featured-3">
+                    <h2 class="pb-1 border-bottom">Ventajas al usar nuestra app</h2>
+                    <div class="row g-4 py-3 row-cols-1 row-cols-lg-3">
+
+
+                        <div class="feature col ">
+                            <div class="feature-icon bg-primary bg-gradient material-symbols-rounded">
+                                heart_plus
+                            </div>
+                            <h2>Control de salud</h2>
+                        </div>
+
+                        <div class="feature col">
+                            <div class="feature-icon bg-primary bg-gradient material-symbols-rounded">
+                                vaccines
+                            </div>
+                            <h2>Vacunación</h2>
+                        </div>
+                        <div class="feature col">
+                            <div class="feature-icon bg-primary bg-gradient material-symbols-rounded">
+                                science
+                            </div>
+                            <h2>Pruebas de laboratorio</h2>
+                        </div>
+                        <div class="feature col">
+                            <div class="feature-icon bg-primary bg-gradient material-symbols-rounded">
+                                quiz
+                            </div>
+                            <h2>Resultados en línea</h2>
+                        </div>
+                        <div class="feature col">
+                            <div class="feature-icon bg-primary bg-gradient material-symbols-rounded">
+                                local_shipping
+                            </div>
+                            <h2>Servicio a domicilio</h2>
+                        </div>
+                        <div class="feature col">
+                            <div class="feature-icon bg-primary bg-gradient material-symbols-rounded">
+                                sell
+                            </div>
+                            <h2>Promociones exclusivas</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End advantages and disadvantages -->
+        <!-- Start Lab register -->
+        <section class="sectionL d-flex justify-content-center flex-column">
+            <h2 class="align-self-center">¿Le gustaría registrar su laboratorio en nuestra plataforma?</h2>
+            <div class="text-center">
+                <a class="btn btn-success align-self-center animate__animated" href="~/Home/RegistroLaboratorio" type="button"> No dude m&aacute;s y registrese</a>
+                
+            </div>
+        </section>
+        <!-- End Lab register -->
+
+    </main>
+
+
+    <!-- Start Footer -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top container">
+        <p class="col-md-4 mb-0 text-muted">© 2022 DevCoders</p>
+
+        <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+            <img class="img-fluid w-25" src="~/Content/Imagenes/logo_dorado-s.png" />
+        </a>
+
+        <ul class="nav col-md-4 justify-content-end">
+            <li><a href="~/Home/PaginaMain" class="nav-link px-2 link-dark">Inicio</a></li>
+            <li><a href="#ServiciosLab" class="nav-link px-2 link-dark">Servicio de laboratorios</a></li>
+            <li><a href="~/Home/LandingTeam" class="nav-link px-2 link-dark">Nuestro equipo</a></li>
+        </ul>
+    </footer>
+    <!-- End Footer -->
+</body>
+
+</html>

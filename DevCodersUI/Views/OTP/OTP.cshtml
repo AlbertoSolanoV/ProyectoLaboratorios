@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "OTP Verification";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    <link href="~/Content/Validaciones.css" rel="stylesheet" />
+}
+
+<body>
+    <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center
+          min-vh-50">
+            <div class="col-12 col-md-8 col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h5>Verificación de registro</h5>
+                            <p class="mb-2">
+                                En unos momentos estará llegando a su teléfono un SMS con un código numérico, por favor digite ese código para terminar su registro en nuestra app.
+                            </p>
+                        </div>
+                        <!-- OTP 1 input -->
+                        <div>
+                            <div class="mb-4">
+                                <input type="number" id="userOTP" class="form-control mb-2" name="txtotp" placeholder="Código" min="1000" max="9999">
+                                <span></span>
+                            </div>
+                            <!-- Button -->
+                            <div class="mb-3 d-grid">
+                                <button class="btn btn-primary" id="btnValidarOTP" type="submit">Verificar código</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>
+    <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+    <script src="~/Scripts/JS/ValidarOTP.js"></script>
+</body>
+

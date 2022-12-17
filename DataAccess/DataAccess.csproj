@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CFECA17-BF35-4992-967E-0765E4ED40B5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DataAccess</RootNamespace>
+    <AssemblyName>DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="CRUD\ExamenClienteCrudFactory.cs" />
+    <Compile Include="CRUD\ExamenCrudFactory.cs" />
+    <Compile Include="CRUD\CitaCrudFactory.cs" />
+    <Compile Include="CRUD\CitasLabCrudFactory.cs" />
+    <Compile Include="CRUD\ClienteCrduFactory.cs" />
+    <Compile Include="CRUD\CrudFactoryOTP.cs" />
+    <Compile Include="CRUD\CrudFactoryReinicioContraseña.cs" />
+    <Compile Include="CRUD\EmpleadoCrudFactory.cs" />
+    <Compile Include="CRUD\EmpleadoLabCrudFactory.cs" />
+    <Compile Include="CRUD\ExamenesSinFacturaCrudFactory.cs" />
+    <Compile Include="CRUD\ExamenInfoLabCrudFactory.cs" />
+    <Compile Include="CRUD\FacturaCrudFactory.cs" />
+    <Compile Include="CRUD\GananciaCrudFactory.cs" />
+    <Compile Include="CRUD\InfoOrdenCrudFactory.cs" />
+    <Compile Include="CRUD\LoginCrudFactory.cs" />
+    <Compile Include="CRUD\InfoLabCrudFactory.cs" />
+    <Compile Include="CRUD\OrdenExamenCrudFactory.cs" />
+    <Compile Include="CRUD\OTPCrudFactory.cs" />
+    <Compile Include="CRUD\RegistroUsuarioCrudFactory.cs" />
+    <Compile Include="CRUD\BitacoraCrudFactory.cs" />
+    <Compile Include="CRUD\CrudFactory.cs" />
+    <Compile Include="CRUD\FacturaLaboratorioCurdFactory.cs" />
+    <Compile Include="CRUD\LaboratorioCrudFactory.cs" />
+    <Compile Include="CRUD\OrdenDeCompraCrudFactory.cs" />
+    <Compile Include="CRUD\PorcentajeCrudFactory.cs" />
+    <Compile Include="CRUD\RegistroUsuarrioLabCrudFactory.cs" />
+    <Compile Include="CRUD\TipoExamenCrudFactory.cs" />
+    <Compile Include="CRUD\UsuarioActivoCrudFactory.cs" />
+    <Compile Include="CRUD\ReinicioContraseñaCrudFactory.cs" />
+    <Compile Include="DAO\SqlDao.cs" />
+    <Compile Include="DAO\SqlOperation.cs" />
+    <Compile Include="MAPPER\BitacoraMapper.cs" />
+    <Compile Include="MAPPER\ExamenClienteMapper.cs" />
+    <Compile Include="MAPPER\ExamenInfoLabMapper.cs" />
+    <Compile Include="MAPPER\CitasLaboratorioMapper.cs" />
+    <Compile Include="MAPPER\FacturaMapper.cs" />
+    <Compile Include="MAPPER\InfoOrdenMapper.cs" />
+    <Compile Include="MAPPER\ExamenMapper.cs" />
+    <Compile Include="MAPPER\CitasMapper.cs" />
+    <Compile Include="MAPPER\ClienteMapper.cs" />
+    <Compile Include="MAPPER\EmpleadoLabMapper.cs" />
+    <Compile Include="MAPPER\EmpleadoMapper.cs" />
+    <Compile Include="MAPPER\ExamenesSinFacturaMapper.cs" />
+    <Compile Include="MAPPER\FacturaLaboratorioMapper.cs" />
+    <Compile Include="MAPPER\InfoLabMapper.cs" />
+    <Compile Include="MAPPER\GananciaMapper.cs" />
+    <Compile Include="MAPPER\ICrudStatementsReinicioContraseña.cs" />
+    <Compile Include="MAPPER\LoginMapper.cs" />
+    <Compile Include="MAPPER\OrdenExamenMapper.cs" />
+    <Compile Include="MAPPER\RegistroUsuarioLabMapper.cs" />
+    <Compile Include="MAPPER\ModificarUsuarioActivoContraseña.cs" />
+    <Compile Include="MAPPER\OTPMapper.cs" />
+    <Compile Include="MAPPER\RegistroUsuarioMapper.cs" />
+    <Compile Include="MAPPER\ICrudStatements.cs" />
+    <Compile Include="MAPPER\IObjectMapper.cs" />
+    <Compile Include="MAPPER\LaboratorioMapper.cs" />
+    <Compile Include="MAPPER\OrdenDeCompraMapper.cs" />
+    <Compile Include="MAPPER\PorcentajeMapper.cs" />
+    <Compile Include="MAPPER\TipoExamenMapper.cs" />
+    <Compile Include="MAPPER\UsuarioActivoMapper.cs" />
+    <Compile Include="MAPPER\ReinicioContraseñaMapper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{fcb7f8ea-2d24-40ad-a77f-bfd178140a45}</Project>
+      <Name>DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

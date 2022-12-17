@@ -1,0 +1,84 @@
+﻿@{
+    ViewBag.Title = "Payment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!--Siempre esto -->
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+    <!-- Fin del Siempre esto -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+
+</head>
+<body>
+    <div>
+        <form id="frmPaypal">
+            <h2>Método de Pago</h2>
+            <img src="~/Content/Imagenes/logo_paypal_principal.jpg" height="120" width="120" />
+            <div>
+                @if (ViewBag.Message != null)
+                {
+                    <div>@ViewBag.Message</div>
+                }
+            </div>
+            <h2>Datos de la Compra</h2>
+
+            <div class="form-group" id="idPayPago">
+                <label for="txtProducto">Laboratorio:</label>
+                <input type="text" class="form-control" id="txtPayLab" readonly="readonly" value="@ViewData["laboratorio"]" />
+            </div>
+            <div class="form-group">
+                <label for="txtCantidad">Número De Factura:</label>
+                <input type="number" class="form-control" id="txtPayOrden" readonly="readonly" value="@ViewData["orden"]" />
+            </div>
+            <div class="form-group">
+                <label for="txtUsuario">:Nombre del Cliente:</label>
+                <input type="text" class="form-control" id="txtPayUsuario" readonly="readonly" value="@ViewData["nombre"]" />
+            </div>
+            <div class="form-group">
+                <label for="txtTotal">Sub-Total:</label>
+                <input type="number" class="form-control" id="txtPaySubTotal" readonly="readonly" value="@ViewData["subTotal"]" />
+            </div>
+            <div class="form-group">
+                <label for="txtTotal">Descuento:</label>
+                <input type="number" class="form-control" id="txtPayDescuento" readonly="readonly" value="@ViewData["descuento"]" />
+            </div>
+            <div class="form-group">
+                <label for="txtTotal">IVA:</label>
+                <input type="number" class="form-control" id="txtPayIVA" readonly="readonly" value="@ViewData["IVA"]" />
+            </div>
+            <div class="form-group">
+                <label for="txtTotal">Total:</label>
+                <input type="number" class="form-control" id="txtPayTotal" readonly="readonly" value="@ViewData["total"]" />
+            </div>
+        </form>
+        <div id="paypal-button-container">
+
+        </div>
+    </div>
+    <!--SCRIPTS-->
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>
+    <script src="https://www.paypal.com/sdk/js?client-id=AfwLGbYvQtwBpZJrxDNJUTcJjZWU42k16_DsHOsqv1jlhUiWoqs8vxW14FI3dHdcpC5RFcIwd6Lnnlcv&currency=USD"></script>
+    <script src="~/Scripts/JS/Paypal2.js"></script>
+
+</body>
+</html>
+

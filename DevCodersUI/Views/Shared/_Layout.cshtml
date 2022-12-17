@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html style="min-height: 100%; position: relative; ">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Style/sweetalert2.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body style="margin: 0; margin-bottom: 40px;">
+    <div class="container-md">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+            <div class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+
+                @Html.ActionLink("CLINNIX", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+
+            </div>
+
+            <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" id="headerItems">
+            </ul>
+            <p class="control">
+                <a href="#" id="btn_carrito" class="button is-info">
+                    <span class="icon">
+                        <i class="fa fa-shopping-cart"></i>
+                    </span>
+                    <span class="tag is-gray" id="totalProductos"><strong>0</strong></span>
+                </a>
+            </p>
+
+        </div>
+    </div>
+    <div id="containRemove" class="container body-content">
+        @RenderBody()
+
+        <footer class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-top">
+            <p class="col-md-4 mb-0 text-muted">DevCoders</p>
+            <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+                <img class="img-fluid w-25" src="~/Content/Imagenes/logo_dorado-s.png" />
+            </a>
+            <ul class="nav col-md-4 justify-content-end ">
+                <li class='nav - link px - 2 link - secondary'> <a href='/Home/PaginaMain' class='nav-link px-2 link-secondary'>Inicio</a></li>
+                <li class='nav - link px - 2 link - secondary'> <a href='/Home/LandingTeam' class='nav-link px-2 link-secondary'>Nosotros</a></li>
+                <li class='nav - link px - 2 link - secondary'> <a href='/Home/LandingProduct' class='nav-link px-2 link-secondary'>Producto</a></li>
+
+            </ul>
+
+        </footer>
+    </div>
+    <script src="~/Scripts/JS/HeaderItems.js"></script>
+    <script src="~/Scripts/JS/CierreSesion.js"></script>
+</body>
+
+
+</html>

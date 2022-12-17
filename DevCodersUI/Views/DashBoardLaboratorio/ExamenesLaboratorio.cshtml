@@ -1,0 +1,147 @@
+﻿
+@{
+    ViewBag.Title = "ExamenesLaboratorio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE HTML>
+
+<html class="bodyPage">
+<head>
+    <title>DashBoard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!--Siempre esto -->
+
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <!-- Fin del Siempre esto -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body>
+
+    <h2>Citas del laboratorio</h2>
+    <div class="position-relative d-flex p-0 center-block">
+        <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+            <!-- Tabla Examenes-->
+            <div class="container-fluid pt-4 px-4">
+                <div class="border border-dark  rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h2 class="mb-0">Exámenes</h2>
+                        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modalExamen" data-bs-whatever="Nuevo">Registrar nuevo examen</button>
+                    </div>
+                    <div class="container">
+                        <table class="table table-striped table-bordered table-sm" id="tbExamenesCreados" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Nombre</th>
+                                    <th>Precio (₡)</th>
+                                    <th>Tipo</th>
+                                    <th>Estado</th>
+                                    <th>Modificar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>S-01</td>
+                                    <td>ACTH, plasma</td>
+                                    <td>51,330</td>
+                                    <td>Sangre</td>
+                                    <td>Activo</td>
+                                    <td><button type="button" id="btnExamenModificar" data-bs-toggle="modal" data-bs-target="#modalExamen" data-bs-whatever="Modificar">Modificar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin tabla examenes -->
+
+
+        </div>
+    </div>
+    <!--Seeccion modal examen-->
+    <div class="modal fade" id="modalExamen" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Examen</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="input-group mb-3">
+                            <label for="recipient-name" class="input-group-text " id="txtNombreExamen">Nombre:</label>
+                            <input type="text" class="form-control" id="nombreExamenModal">
+                        </div>
+                        <div class="input-group mb-3">
+                            <label for="message-text" class="input-group-text " id="txtDescripcionExamen">Descripción:</label>
+                            <textarea class="form-control" id="descripcionExamenModal"></textarea>
+                        </div>
+                        <div class="input-group mb-3">
+                            <label for="recipient-name" class="input-group-text " id="txtPrecioExamen">Precio:</label>
+                            <input type="number" class="form-control" id="precioExamenModal" min="0">
+                        </div>
+                    </form>
+                    <div class="input-group mb-3">
+                        <label for="message-text" class="input-group-text " id="txtDescripcionExamen">Medición:</label>
+                        <input type="text" class="form-control" id="nombreMedicion">
+                    </div>
+                    <div class="input-group mb-3">
+                        <label for="recipient-name" class="input-group-text " id="txtPrecioExamen">Valor normal:</label>
+                        <input type="number" class="form-control" id="precioExamenModal" min="0">
+                    </div>
+                    <button type="button" class="btn btn-primary" id="btnNuevoExamen">Agregar medición</button>
+
+                    <h5 class="modal-title" id="exampleModalLabel">Mediciones para el examen</h5>
+                    <div class="container">
+                        <table class="table table-striped table-bordered table-sm" id="tbMedicionesExamen" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Nombre</th>
+                                    <th>Valor normal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>G-R</td>
+                                    <td>57.8</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary" id="btnNuevoExamen">Crear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>
+
+    <script src="~/Scripts/JS/DashboardLab.js"></script>
+</body>
+</html>

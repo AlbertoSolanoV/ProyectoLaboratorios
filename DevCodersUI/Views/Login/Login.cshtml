@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    <link href="~/Content/Validaciones.css" rel="stylesheet" />
+}
+
+<head>
+
+</head>
+
+
+<section class="vh-200">
+    <div class="container-fluid h-custom">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-md-9 col-lg-6 col-xl-5">
+                <img src="~/Content/Imagenes/ImagenLogin.png" width="400" height="400" />
+
+
+            </div>
+            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                <section>
+
+                    <div class="divider d-flex align-items-center my-4">
+                        <p class="text-center fw-bold mx-3 mb-0"></p>
+                    </div>
+
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                        <label>
+                            <input type="email" id="campoCorreo" class="form-control form-control-lg"
+                                   placeholder="Ingrese un correo valido" name="email" />
+                            <span></span>
+                            <label class="form-label" for="form3Example3"></label>
+                        </label>
+
+                    </div>
+
+                    <!-- Password input -->
+                    <div class="form-outline mb-3">
+                        <label>
+                            <input type="password" id="campoContraseña" class="form-control form-control-lg"
+                                   placeholder="Ingrese Contraseña" name="password" /><span></span>
+
+                            <label class="form-label" for="form3Example4">Contraseña</label>
+                        </label>
+
+                    </div>
+                    <!-- Forgot Password -->
+                    <div class="d-flex justify-content-between align-items-center">
+                        <a href="~/ReinicioContraseña/ReinicioContraseña" class="text-body">¿Olvidó la Contraseña?</a>
+                    </div>
+                    <!-- boton inicio sesion -->
+                    <div class="text-center text-lg-start mt-4 pt-2">
+                        <button id="btnInicioSesion" href="" value="submit" class="btn btn-primary btn-lg" type="submit"
+                                style="padding-left: 2.5rem; padding-right: 2.5rem;">
+
+                            Iniciar Sesión
+                        </button>
+
+
+                        <!-- Registro -->
+                        <p class="small fw-bold mt-2 pt-1 mb-0">
+                            ¿No tienes una cuenta? <a href="~/RegistroForm/RegistroForm" clsass="link-primary">Registro</a>
+                        </p>
+                    </div>
+
+                </section>
+            </div>
+            <!-- Boton atras -->
+            <div>
+                <a class="btn btn-secondary" href="~/Home/LandingProduct" type="button" style="float:right">Atras</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>
+<script src="~/Scripts/JS/ValidationForm.js"></script>
+<script src="~/Scripts/JS/Login.js"></script>

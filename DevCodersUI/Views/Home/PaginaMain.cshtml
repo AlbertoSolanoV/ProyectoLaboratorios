@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "PaginaMain";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!--Siempre esto -->
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+   
+    <!-- Fin del Siempre esto -->
+</head>
+<body style="background-color:red">
+
+    <h2>CLINNIX</h2>
+    <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+        <!--Inicio de carrousel-->
+        <div class="mb-3">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="~/Content/Imagenes/lab01.png" class="d-block w-100 " style="max-height:500px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/Content/Imagenes/lab02.jpg" class="d-block w-100 " style="max-height:500px" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/Content/Imagenes/lab03.jpg" class="d-block w-100" style="max-height:500px" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--laboratorio-->
+
+        <h2 class="h2">Laboratorios registrados</h2>
+        <form class="col-12 col-lg-auto mb-3 mb-lg-3 me-lg-3 ">
+            <input type="search" class="form-control" placeholder="Buscar exámen" aria-label="Search">
+        </form>
+        <div class="row" id="seccionLaboratorios">
+
+        </div>
+        <!--Fin de laboratorio-->
+
+    </div>
+
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/Scripts/JS/PaginaMain.js"></script>
+</body>
+
+</html>

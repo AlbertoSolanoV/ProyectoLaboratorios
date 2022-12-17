@@ -1,0 +1,57 @@
+
+@{
+    ViewBag.Title = "RegistroCita";
+    Layout = "~/Views/Shared/_Layout2.cshtml";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link rel="stylesheet" href="~/Content/cita.css" />
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<div class="body d-flex justify-content-center">
+    <div class="container">
+        <section class="text-center">
+            <h1>Cita médica</h1>
+        </section>
+        <div class="d-flex flex-row justify-content-center w-100">
+            <form class="w-100">
+                <section class="d-flex flex-row justify-content-center">
+                    <section class="d-flex flex-column">
+                        <label>Tipo del examen</label>
+                        <label>Fecha para el examen</label>
+                    </section>
+                    <section class="d-flex flex-column">
+                        <select id="TExamen">
+                            <option value="0" disabled selected class="d-none">Seleccione el tipo de examen</option>
+                            <option value="1">tipo de examen 1</option>
+                            <option value="2">tipo de examen 2</option>
+                        </select>
+                        <input type="datetime-local">
+                    </section>
+                    <section class="cita">
+                        <label>Descripción del examen</label>
+                        <p id="descEx">Nombre del examen y descripción del mismo</p>
+                        <label>Precio</label>
+                        <p id="precio">25000</p>
+                    </section>
+                </section>
+                <section class="text-center">
+                    <button class="registroBtn" onclick="registrar(event)"><p>Solicitar</p></button>
+                </section>
+            </form>
+        </div>
+        <div>
+            <a class="btn btn-secondary" href="~/Home/PaginaMain" type="button" style="float:right">Atrás</a>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
+
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script type="text/javascript" src="~/Scripts/JS/registrarCitas.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>

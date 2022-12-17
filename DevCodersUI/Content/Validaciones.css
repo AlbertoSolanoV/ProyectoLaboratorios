@@ -1,0 +1,10 @@
+﻿.invalid{
+    border: solid 1px red;
+    box-shadow: 0 0 10px red;
+}
+
+
+.error{
+    color: orangered;
+    display: block;
+}

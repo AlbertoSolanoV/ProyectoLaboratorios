@@ -1,0 +1,74 @@
+:root {
+    --celesteClaro: #00A6E3;
+    --celestePOscurecido: #0092C7;
+    --celesteOscuro: #005675;
+    --negro: #0000;
+    --blanco: #ffff;
+}
+
+button p {
+    padding: 3%;
+    margin: 0 !important;
+    font-size: 1.2rem;
+}
+
+.error {
+    border: 1px solid red !important;
+}
+
+button {
+    border: none !important;
+    border-radius: 4%;
+    background-color: var(--celestePOscurecido);
+    color: var(--blanco);
+}
+
+form section section input,
+textarea {
+    margin-top: 10%;
+    width: 100%;
+}
+
+form section section label {
+    padding-bottom: 15%;
+}
+
+form section section {
+    padding: 4%;
+    padding-left: 3% !important;
+}
+
+.body {
+    background-color: var(--celestePOscurecido);
+}
+
+.container {
+    background-color: var(--blanco);
+    margin: 3%;
+    padding: 2%;
+    border-radius: 1%;
+}
+
+.cita label {
+    padding-bottom: 5% !important;
+    font-weight: bold;
+}
+
+.modificaBtn {
+    width: 30%;
+    margin: 5%;
+    padding: 2%;
+}
+
+.MCitas {
+    width: calc(100%/3) !important;
+    border-radius: 3%;
+    border: 1px solid;
+    margin: 2%;
+}
+
+    .MCitas p,
+    h3 {
+        padding: 2%;
+        padding-left: 5%;
+    }

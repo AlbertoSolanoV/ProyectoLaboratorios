@@ -1,0 +1,12 @@
+C:\Users\alber\Source\Repos\CLINNIX\DTO\bin\Debug\DTO.dll
+C:\Users\alber\Source\Repos\CLINNIX\DTO\bin\Debug\DTO.pdb
+C:\Users\alber\Source\Repos\CLINNIX\DTO\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\alber\Source\Repos\CLINNIX\DTO\bin\Debug\itextsharp.dll
+C:\Users\alber\Source\Repos\CLINNIX\DTO\bin\Debug\PayPalCheckoutSdk.dll
+C:\Users\alber\Source\Repos\CLINNIX\DTO\bin\Debug\PayPalHttp-Dotnet.dll
+C:\Users\alber\Source\Repos\CLINNIX\DTO\bin\Debug\itextsharp.xml
+C:\Users\alber\Source\Repos\CLINNIX\DTO\obj\Debug\DTO.csproj.AssemblyReference.cache
+C:\Users\alber\Source\Repos\CLINNIX\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+C:\Users\alber\Source\Repos\CLINNIX\DTO\obj\Debug\DTO.csproj.CopyComplete
+C:\Users\alber\Source\Repos\CLINNIX\DTO\obj\Debug\DTO.dll
+C:\Users\alber\Source\Repos\CLINNIX\DTO\obj\Debug\DTO.pdb

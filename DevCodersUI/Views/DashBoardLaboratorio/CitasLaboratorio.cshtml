@@ -1,0 +1,146 @@
+﻿
+@{
+    ViewBag.Title = "CitasLaboratorio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE HTML>
+
+<html class="bodyPage">
+<head>
+    <title>DashBoard</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+    <!--Siempre esto -->
+
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <!-- Fin del Siempre esto -->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="img/favicon.ico" rel="icon">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/jquery.dataTables.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+</head>
+<body>
+
+    <h2 id="tituloPag">Citas del laboratorio</h2>
+    <div class="position-relative d-flex p-0 center-block">
+        <div class="container shadow-lg p-3 mb-5 bg-body rounded">
+            <!-- Para la primer tabla de Citas-->
+            <div class="container-fluid pt-4 px-4">
+                <div class="border border-dark rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h2 class="mb-0">Citas agendadas</h2>
+                    </div>
+                    <div class="container">
+                        <table class="table table-striped table-bordered table-sm" id="tbCitasCreadas" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Cliente</th>
+                                    <th>Email</th>
+                                    <th>Teléfono</th>
+                                    <th>Horario</th>
+                                    <th>Examen</th>
+                                    <th>Validar</th>
+                                </tr>
+                            </thead>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin de tabla citas-->
+            <!-- Para la primer tabla de Citas-->
+            <div class="container-fluid pt-4 px-4">
+                <div class="border border-dark rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h2 class="mb-0">Horarios de citas habilitadas</h2>
+                    </div>
+                    <div class="container">
+                        <table class="table table-striped table-bordered table-sm" id="tbCitasHabilitadas" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Horario</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin de tabla citas-->
+            <!-- Seccion crear espacio cita-->
+            <div class="container-fluid pt-4 px-4">
+                <div class="border border-dark  rounded p-4">
+                    <div class="d-flex align-items-center justify-content-between mb-4">
+                        <h2 class="mb-0">Registrar horario para cita</h2>
+                    </div>
+                    <div class="input-group mb-3 " id="seccionCrearCita">
+                        <input type="text" id="horarioCitaCrea" />
+                    </div>
+
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-primary mb-3" id="btnCrearHorarioCita">Crear horario cita</button>
+                    </div>
+                </div>
+
+            </div>
+            <!--Fin seeccion espacio cita-->
+        </div>
+
+        <!-- Modal Seccion de descuentos-->
+        <div class="modal fade" id="modalCita" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="idNombreExamen"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container">
+                            <table class="table table-striped table-bordered table-sm" id="tbHorarioLab" style="width:100%">
+                                <thead>
+                                    <tr>
+                                        <th>Componente</th>
+                                        <th>Resultado</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="parametro">
+                                </tbody>
+
+                            </table>
+                            <div class="mb-3">
+                                <button type="submit" class="btn btn-primary mb-3" id="btnGuardarExamenDatos">Guardar datos</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.1/js/jquery.dataTables.js"></script>
+    <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>
+
+    <script src="~/Scripts/JS/CitasLab.js"></script>
+</body>
+</html>

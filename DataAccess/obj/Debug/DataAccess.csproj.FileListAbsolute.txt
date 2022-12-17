@@ -1,0 +1,9 @@
+C:\Users\alber\Source\Repos\CLINNIX\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\alber\Source\Repos\CLINNIX\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\alber\Source\Repos\CLINNIX\DataAccess\bin\Debug\DTO.dll
+C:\Users\alber\Source\Repos\CLINNIX\DataAccess\bin\Debug\DTO.pdb
+C:\Users\alber\Source\Repos\CLINNIX\DataAccess\obj\Debug\DataAccess.csproj.AssemblyReference.cache
+C:\Users\alber\Source\Repos\CLINNIX\DataAccess\obj\Debug\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\alber\Source\Repos\CLINNIX\DataAccess\obj\Debug\DataAccess.csproj.CopyComplete
+C:\Users\alber\Source\Repos\CLINNIX\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\alber\Source\Repos\CLINNIX\DataAccess\obj\Debug\DataAccess.pdb

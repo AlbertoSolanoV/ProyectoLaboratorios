@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "ModificarContraseña";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    <link href="~/Content/Validaciones.css" rel="stylesheet" />
+}
+
+<body>
+    <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center
+          min-vh-50">
+            <div class="col-12 col-md-8 col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h5>Modificar Contraseña</h5>
+                            <p class="mb-2">
+                                Ingrese su nueva contraseña.
+                            </p>
+                        </div>
+                        <!-- paswword 1 input -->
+                        <div>
+                            <div class="mb-4">
+                                <input type="password" id="password" class="form-control mb-2" name="password" placeholder="Ingrese su nueva contraseña">
+                                <span></span>
+                            </div>
+
+                            <!-- paswword 2 input -->
+                            <div class="mb-4">
+                                <input type="password" id="password2" class="form-control mb-2" name="password2" placeholder="Confirme su nueva contraseña">
+                                <span></span>
+                            </div>
+
+
+                            <!-- Button -->
+                            <div class="mb-3 d-grid">
+                                <button id="modificarContraseña" class="btn btn-primary" href="~/Login/Login" type="submit">Cambiar contraseña</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/Scripts/JS/ReiniciarContraseña.js"></script>
+    <script src="~/Scripts/JS/ValidationFormModificarContraseña.js"></script>
+</body>
+

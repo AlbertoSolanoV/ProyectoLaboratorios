@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "ReinicioContraseña";
+    Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+    <link href="~/Content/Validaciones.css" rel="stylesheet" />
+}
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.6.8/dist/sweetalert2.all.min.js"></script>
+
+<script src="~/Scripts/JS/ModificarUsuarioActivo.js"></script>
+<body>
+    <div class="container d-flex flex-column">
+        <div class="row align-items-center justify-content-center
+          min-vh-50">
+            <div class="col-12 col-md-8 col-lg-4">
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <div class="mb-4">
+                            <h5>¿Olvido la Contraseña?</h5>
+                            <p class="mb-2">
+                                Ingrese su correo registrado para reiniciar contraseña.
+                            </p>
+                        </div>
+                        <!-- Email input -->
+                        <div>
+                            <div class="mb-4">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" id="txtemail" class="form-control mb-2" name="email" placeholder="Ingrese su correo">
+                                <span></span>
+                            </div>
+                            <!-- Button -->
+                            <div class="mb-3 d-grid">
+                                <button id="btnReinicioContraseña" class="btn btn-primary" href="" type="submit">Reinicio de Contraseña</button>
+                                @*<a class="btn btn-primary" href="~/ModificarPassword/ModificarPassword" type="submit">Reinicio de Contraseña</a>*@
+                                <!-- Registro -->
+                            </div>
+                            <span>¿No tienes una cuenta? <a href="~/RegistroForm/RegistroForm">Registrarse</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Boton atras -->
+            <div>
+                <a class="btn btn-secondary" href="~/Login/Login" type="button" style="float:right">Atrás</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+

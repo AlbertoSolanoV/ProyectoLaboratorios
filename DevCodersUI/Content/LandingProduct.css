@@ -1,0 +1,222 @@
+﻿:root {
+    --celesteClaro: #00A6E3;
+    --celestePOscurecido: #0092C7;
+    --celesteOscuro: #005675;
+    --negro: #0000;
+    --blanco: #ffff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.descripcion {
+    padding-top: 10%;
+    margin-bottom: 4%;
+    width: 60%;
+    margin-left: 12%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 300%;
+}
+
+.linkLoginRed {
+    color: #000000;
+    background-color: #0092C7;
+    border-radius:10px;
+    width:100%; 
+    font-size: 200%;
+    margin-top: -70%;
+    margin-left: 20%;
+}
+
+.imgContainerDan {
+    margin-left: 60%;
+    width: 30%;
+    margin-bottom: 3%;
+    margin-top: -20%;
+}
+
+.containerVen2 {
+    background-color: #F5F5DC;
+    justify-items: center;
+}
+
+.tituloCliente {
+    display: flex;
+    justify-content: center;
+    font-size: 300%; 
+    padding-top:2%;
+
+}
+
+.ventajas {
+    margin-bottom: 2%;
+    font-size: 140%;
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #fff;
+    border-radius: .75rem;
+}
+
+/*--------------------------------------------------------------
+# Google fonts Icons
+--------------------------------------------------------------*/
+
+.material-icons {
+   
+    font-size: 32px; /* Preferred icon size */
+}
+
+/*--------------------------------------------------------------
+# Google fonts Icons heart
+--------------------------------------------------------------*/
+.material-symbols-rounded {
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48
+}
+
+
+/*--------------------------------------------------------------
+# Featured Services
+--------------------------------------------------------------*/
+.ImageFeaturesSection {
+    margin-left: 55%;
+    width: 50%;
+    margin-bottom: 1%;
+    margin-top: -30%;
+}
+
+section .featured-services {
+    padding: 60px 0;
+    overflow: hidden;
+}
+.section-bg .featured-services {
+    background-color: #f6f9fe;
+}
+
+.section-title h2 .featured-services {
+    font-size: 13px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 8px 20px;
+    margin: 0;
+    background: #e7f1fd;
+    color: #106eea;
+    display: inline-block;
+    text-transform: uppercase;
+    border-radius: 50px;
+}
+
+.section-title h3 .featured-services {
+    margin: 15px 0 0 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.section-title h3 span .featured-services {
+    color: #106eea;
+}
+
+.section-title p .featured-services {
+    margin: 15px auto 0 auto;
+    font-weight: 600;
+}
+
+
+/*--------------------------------------------------------------
+# caja de los servicios
+--------------------------------------------------------------*/
+
+.featured-services .icon-box {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 0 29px 0 rgba(68, 88, 144, 0.12);
+    transition: all 0.3s ease-in-out;
+    border-radius: 8px;
+    z-index: 1;
+}
+
+    .featured-services .icon-box::before {
+        content: "";
+        position: absolute;
+        background: #cbe0fb;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        top: 100%;
+        transition: all 0.3s;
+        z-index: -1;
+    }
+
+    .featured-services .icon-box:hover::before {
+        background: #106eea;
+        top: 0;
+        border-radius: 0px;
+    }
+
+.featured-services .title {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.featured-services .description {
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 0;
+}
+
+
+.featured-services .icon-box:hover .description {
+    color: #fff;
+}
+
+/*Color del hover en la caja*/
+.featured-services .icon-box:hover .icon i {
+    color: #0DA6E3;
+}
+
+.sectionL {
+    padding: 5%;
+}
+
+    .sectionL h2 {
+        padding-bottom: 2%;
+        color: var(--celestePOscurecido);
+    }
+
+    .sectionL p {
+        font-size: 1.5rem;
+        padding: 0 !important;
+    }
+
+    .sectionL button {
+        padding: 1%;
+        background: rgba(245, 243, 243, 0.932);
+        width: 30%;
+        border: none;
+        box-shadow: 5px 5px 10px gray;
+    }
+
+        .sectionL button:hover {
+            background: var(--celestePOscurecido);
+            border-radius: 2%;
+            color: var(--blanco);
+            transition-duration: 0.5s;
+            display: inline-block;
+            margin: 0 0.5rem;
+            animation: pulse;
+            /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 5s;
+            /* don't forget to set a duration! */
+        }
+
